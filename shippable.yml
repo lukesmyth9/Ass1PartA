@@ -1,11 +1,12 @@
 language: java
 
 jdk:
-  - oraclejdk8
+  - oraclejdk11
 
 build:
   ci:
     # Create folders for test and code coverage
     - mkdir -p shippable/codecoverage
-    - mvn install
-    - cp -r target shippable/codecoverage
+    - mkdir -p shippable/testresults
+    - mvn clean verify
+    - cp target/surefire-reports/* shippable/testresults
