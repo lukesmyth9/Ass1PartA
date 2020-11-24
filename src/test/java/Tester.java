@@ -13,7 +13,7 @@ public class Tester {
          
          //System.out.println("Username= " + student.getUsername());
          
-         Assert.assertEquals("Luke21", student.getUsername());
+         Assert.assertEquals("Luke21", student.getUsername()); //checks if getUsername works as it should
         
          
     }

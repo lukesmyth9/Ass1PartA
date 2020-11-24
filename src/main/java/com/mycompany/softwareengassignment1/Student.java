@@ -22,7 +22,7 @@ public class Student {
     int ID;
     String username;
    
-    public Student(String name, int age, String dateOfBirth, int ID)
+    public Student(String name, int age, String dateOfBirth, int ID)//modification of name, int,age, dob and id for testing
     {
         this.name = name;
         this.age = age;
@@ -68,14 +68,14 @@ public int getID()
 
 public String getUsername() 
 {
-    this.username = this.name + this.age;    
+    this.username = this.name + this.age;    //concatenates name and age for username
     return username;
 }
     public void addModuleToStudent(Module module)
     {
-        modules.add(module);
+        modules.add(module);//adds module to student
     }
-    public void printAssignedCoursesToStudent()
+    public void printAssignedCoursesToStudent()//prints courses assigned to student from arraylist
     {
         System.out.println("The student is in this course: ");
         for(Course course : courses)
@@ -83,7 +83,7 @@ public String getUsername()
             System.out.println("Name: " + course.getCourseName() + "\n");
         }
     }
-    public void printAssignedModulesToStudents()
+    public void printAssignedModulesToStudents()//prints modules assigned to students from arraylist
     {
         System.out.println("This student has the following modules: ");
         for(Module module : modules)
@@ -93,9 +93,9 @@ public String getUsername()
     }
     public void addCourseToStudent(Course course)
     {
-        courses.add(course);
+        courses.add(course);//add course to arraylist
     }
-    public void studentInformation(Student student)
+    public void studentInformation(Student student)//prints student information
     {
         System.out.println("Student Name: " + student.getName() + "\nUsername: " + student.getUsername() + "\nAge: " + student.getAge() + "\nDate of birth: " + student.getDateOfBirth());
         student.printAssignedCoursesToStudent();

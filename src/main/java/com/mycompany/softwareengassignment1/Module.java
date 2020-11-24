@@ -19,7 +19,7 @@ public class Module {
     ArrayList<Course> courses = new ArrayList<Course>();
     ArrayList<Student> students = new ArrayList<Student>();
     
-    public Module(String moduleName, String ID)
+    public Module(String moduleName, String ID)//allows to add modulename and id
     {
         this.moduleName = moduleName;
         this.ID = ID;
@@ -49,13 +49,13 @@ public String getID()
 }
 public void addStudentToModule(Student student)
 {
-    students.add(student);
+    students.add(student);//add student to module student to arraylist
 }
 public void addCourseToModule(Course course)
 {
-    courses.add(course);
+    courses.add(course);//adds course to module
 }
-public void printStudents()
+public void printStudents()//prints student iinfo
 {
     System.out.println("Students enrolled in this module: ");
     for (Student student : students)
@@ -63,7 +63,7 @@ public void printStudents()
         System.out.println("Name: " + student.getName() + " Username: " + student.getUsername());
     }
 }
-public void printCourses()
+public void printCourses()//prints courses
 {
     System.out.println("Courses that are in this module: ");
     for (Course course : courses)
@@ -71,7 +71,7 @@ public void printCourses()
         System.out.println("Name: " + course.getCourseName());
     }
 }
-public void moduleInformation(Module module)
+public void moduleInformation(Module module)//prints module info
 {
     System.out.println("Module Name: " + module.getModuleName() + "\nModule ID: " + module.getID() + "\n");
     module.printCourses();

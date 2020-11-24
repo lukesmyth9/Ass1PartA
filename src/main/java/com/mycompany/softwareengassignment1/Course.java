@@ -13,12 +13,12 @@ import org.joda.time.*;
 public class Course {
     
     String courseName;
-    ArrayList<Module> modules = new ArrayList<Module>();
+    ArrayList<Module> modules = new ArrayList<Module>(); 
     ArrayList<Student> students = new ArrayList<Student>();
-    LocalDate startDate;
+    LocalDate startDate; //jodatime
     LocalDate endDate;
     //constructor
-    public Course(String courseName, String startDate, String endDate)
+    public Course(String courseName, String startDate, String endDate) //gets inputs for course and makes them equal to the constructor values
     {
         this.courseName = courseName;
         //this.modules = modules;
@@ -28,7 +28,7 @@ public class Course {
     }
     
     //Mutator methods
-    public void setCourseName(String courseName)
+    public void setCourseName(String courseName)//set course
     {
         this.courseName = courseName;
     }
@@ -40,45 +40,45 @@ public class Course {
     }
     public void addStudent(Student student)
     {
-        students.add(student);
+        students.add(student);//method to add student to student arraylist
     }
-    public void printStudentsEnrolled()
+    public void printStudentsEnrolled()//method prints all students in student arraylist
     {
         System.out.println("The following students are enrolled in this course: ");
         for(Student student : students)
         {
-            System.out.println("Name: " + student.getName() + " Username: " + student.getUsername());
+            System.out.println("Name: " + student.getName() + " Username: " + student.getUsername()); //prints their name and username
         }
     }
-    public void printModules()
+    public void printModules()//method prints modules from module arraylist
     {
         System.out.println("The following Modules are enrolled in this course: ");
         for(Module module : modules)
         {
-            System.out.println("Module Name: " + module.getModuleName() + " Module ID: " + module.getID());
+            System.out.println("Module Name: " + module.getModuleName() + " Module ID: " + module.getID());//prints mod name and id
         }
     }
     public void addModule(Module module)
     {
-        modules.add(module);
+        modules.add(module);//add method for module to arraylist
     }
     
     public LocalDate getStartDate()
     {
-        return this.startDate;
+        return this.startDate;//get method for startdate
     }
     public LocalDate getEndDate()
     {
-        return this.endDate;
+        return this.endDate;//get method for startdate
     }
     
     
-    public void courseInformation(Course course)
+    public void courseInformation(Course course)//prints course information 
     {
-        System.out.println("Course Name: " + course.getCourseName() + "\nStart Date: " + course.getStartDate() + "\nEnd Date: " + course.getEndDate() + "\n");
-       course.printStudentsEnrolled();
+        System.out.println("Course Name: " + course.getCourseName() + "\nStart Date: " + course.getStartDate() + "\nEnd Date: " + course.getEndDate() + "\n");//name start date and end date
+       course.printStudentsEnrolled();//calls studentsenrolled function
    System.out.println("\n");
-       course.printModules();
+       course.printModules();//calls print module function
     }
     
 }
